@@ -356,6 +356,12 @@
         <div style="padding-top: 30px">
             <div class="company-address-container company-address">
                 {!! $company_address !!}
+
+                @if(env('COMPANY_TAX_NUMBER'))
+                    <div style="margin-top:6px;">
+                        <strong>Steuernummer:</strong> {{ env('COMPANY_TAX_NUMBER') }}
+                    </div>
+                @endif
             </div>
 
             <div class="invoice-details-container">
